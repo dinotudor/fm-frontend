@@ -1,10 +1,15 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { withAuth } from "../lib/AuthProvider";
+
 class Signup extends Component {
   state = {
     username: "",
-    password: ""
+    password: "",
+    email: "",
+    description: "",
+    picture: "",
+    instruments: ""
   };
 
   handleFormSubmit = event => {
