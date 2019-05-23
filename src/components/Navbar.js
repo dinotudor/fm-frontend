@@ -15,6 +15,11 @@ class Navbar extends Component {
           <>
             <Link to="/login">Login</Link>
             <Link to="/signup">Signup</Link>
+            <Link to="/Dashboard">Home</Link>
+            <Link to="/EditProfile">Edit Profile</Link>
+            <Link to="/MyProfile">My Profile</Link>
+            <Link to="/UserProfile">User Profile</Link>
+            <Link to="/Favorite">Favorite</Link>
           </>
         )}
       </div>
