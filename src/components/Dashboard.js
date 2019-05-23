@@ -1,16 +1,13 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Route, Redirect } from "react-router-dom";
 import { withAuth } from "../lib/AuthProvider";
 
-class Dashboard extends Component {
-  render() {
+function Dashboard ({component: Component, isLoggedin, ...rest }) {
     return (
       <div>
         <h1>HELLO!</h1>
-      </div>
-    )
-
-    }
-}
+    </div>
+  );
+ }
 
 export default withAuth(Dashboard);
