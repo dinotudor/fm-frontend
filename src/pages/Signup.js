@@ -9,7 +9,9 @@ class Signup extends Component {
     email: "",
     description: "",
     picture: "",
-    instruments: ""
+    instruments: "",
+    media: "",
+    favorites: ""
   };
 
   handleFormSubmit = event => {
