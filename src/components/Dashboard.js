@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import { Route, Redirect } from "react-router-dom";
-import { withAuth } from "../lib/AuthProvider";
+import {  Link } from "react-router-dom";
+//import { withAuth } from "../lib/AuthProvider";
 import profile from '../lib/profile-service';
-//import Navbar from './Navbar';
 
 class Dashboard extends Component {
   state = {
@@ -19,7 +18,7 @@ class Dashboard extends Component {
     return (
       <div>
       {profiles.map((profile, index)=>{
-        return <p key={profile._id}>{profile.username}</p>
+        return <Link to={`userprofile/${profile._id}`}><p key={profile._id}>{profile.username}</p> </Link>
       })}
       </div>
     )

@@ -10,6 +10,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import AnonRoute from "./components/AnonRoute";
 import AuthProvider from "./lib/AuthProvider";
 import Dashboard from './components/Dashboard';
+import UserProfile from './components/UserProfile';
 
 class App extends Component {
   render() {
@@ -23,6 +24,7 @@ class App extends Component {
             <AnonRoute path="/login" component={Login} />
             <PrivateRoute path="/private" component={Private} />
             <PrivateRoute path="/dashboard" component={Dashboard} />
+            <PrivateRoute path="/userprofile" component={UserProfile} />
           </Switch>
         </div>
       </AuthProvider>

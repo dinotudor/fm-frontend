@@ -11,6 +11,10 @@ class Profile {
   getAll() {
     return this.auth.get("/").then(response => response.data);
   }
+
+  getOne(id) {
+    return this.auth.get(`/${id}`).then(response => response.data);
+  }
 }
 
 const profile = new Profile();
