@@ -9,7 +9,7 @@ import Login from "./pages/Login";
 import PrivateRoute from "./components/PrivateRoute";
 import AnonRoute from "./components/AnonRoute";
 import AuthProvider from "./lib/AuthProvider";
-import Dashboard from './components/Dashboard';
+import Dashboard from './pages/Dashboard';
 import UserProfile from './components/UserProfile';
 
 class App extends Component {
