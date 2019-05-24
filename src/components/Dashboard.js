@@ -18,7 +18,9 @@ class Dashboard extends Component {
     return (
       <div>
       {profiles.map((profile, index)=>{
-        return <Link to={`userprofile/${profile._id}`}><p key={profile._id}>{profile.username}</p> </Link>
+        return <Link key={profile._id} to={`userprofile/${profile._id}`}>
+                  <p >{profile.username}</p>
+              </Link>
       })}
       </div>
     )

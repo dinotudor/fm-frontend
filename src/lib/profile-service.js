@@ -2,18 +2,18 @@ import axios from "axios";
 
 class Profile {
   constructor() {
-    this.auth = axios.create({
+    this.profile = axios.create({
       baseURL: "http://localhost:5000/profile",
       withCredentials: true
     });
   }
 
   getAll() {
-    return this.auth.get("/").then(response => response.data);
+    return this.profile.get("/").then(response => response.data);
   }
 
   getOne(id) {
-    return this.auth.get(`/${id}`).then(response => response.data);
+    return this.profile.get(`/${id}`).then(response => response.data);
   }
 }
 
