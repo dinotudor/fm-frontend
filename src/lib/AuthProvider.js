@@ -35,8 +35,7 @@ class AuthProvider extends Component {
   };
 
   componentDidMount() {
-    auth
-      .me()
+    auth.me()
       .then(user => {
         this.setState({
           isLoggedin: true,
