@@ -1,23 +1,19 @@
 import React, { Component } from 'react'
-import profile from '../lib/profile-service';
+import {withAuth} from './../lib/AuthProvider';
 
 class MyProfile extends Component {
 
-  state = {
-    profiles: [],
-  }
-
   componentDidMount(){
-    profile.getAll()
-      .then((profiles)=>this.setState({profiles}))
+    console.log(this.props.user)
+
   }
   render() {
     return (
       <div>
-
+       <h1>{this.props.user.username}</h1>
       </div>
     )
   }
 }
 
-export default MyProfile;
+export default withAuth(MyProfile);
