@@ -11,6 +11,7 @@ class MyProfile extends Component {
     return (
       <div>
        <h1>{this.props.user.username}</h1>
+       <p>{this.props.user.description}</p>
       </div>
     )
   }

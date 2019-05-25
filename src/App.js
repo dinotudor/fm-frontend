@@ -12,6 +12,7 @@ import AuthProvider from "./lib/AuthProvider";
 import Dashboard from './pages/Dashboard';
 import UserProfile from './components/UserProfile';
 import MyProfile from './pages/MyProfile';
+import EditProfile from './pages/EditProfile';
 
 class App extends Component {
   render() {
@@ -27,6 +28,7 @@ class App extends Component {
             <PrivateRoute path="/dashboard" component={Dashboard} />
             <PrivateRoute path="/userprofile/:id" component={UserProfile} />
             <PrivateRoute path="/profile" component={MyProfile} />
+            <PrivateRoute path="/edit" component={EditProfile} />
           </Switch>
         </div>
       </AuthProvider>
