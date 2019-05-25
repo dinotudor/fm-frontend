@@ -19,8 +19,13 @@ class Profile {
   editOne({ username, description, instruments, genres, id}) {
     return this.profile.put('/edit').then(response => response.data);
   }
-}
 
+
+  imageUpload(file) {
+    return this.profile.post('/picture', file)
+    .then(({data}) => data)
+  }
+}
 
 const profile = new Profile();
 

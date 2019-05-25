@@ -31,6 +31,21 @@ class EditProfile extends Component {
     this.setState({ [name]: value });
   };
 
+  fileOnchange = (event) => {
+    const file = event.target.files[0];
+    const uploadData = new FormData()
+    uploadData.append('photo', file)
+
+    profile.imageUpload(uploadData)
+    .then((image) => {
+      this.setState({
+        image,
+        disable: false,
+      })
+    })
+    .catch((error) => console.log(error))
+  }
+
 
   render() {
     return (
@@ -69,10 +84,16 @@ class EditProfile extends Component {
                     onChange={this.handleChange}
                     />
 
+                    <label>Profile Photo:</label>
+                    <input
+                      type="file"
+                      onChange={this.fileOnchange}
+                    />
+
 
                 <input type="submit" value="Send" />
           </form>
-        <Link to='/dashboard'><button >back</button></Link>
+        <Link to='/dashboard'><button >Home</button></Link>
       </div>
     )
   }
