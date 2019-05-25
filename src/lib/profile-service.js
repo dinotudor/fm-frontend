@@ -15,7 +15,12 @@ class Profile {
   getOne(id) {
     return this.profile.get(`/${id}`).then(response => response.data);
   }
+
+  editOne(id) {
+    return this.profile.put('/edit').then(response => response.data);
+  }
 }
+
 
 const profile = new Profile();
 
