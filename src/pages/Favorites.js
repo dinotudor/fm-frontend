@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import favorite from './../lib/favorite-service';
+import {withAuth} from './../lib/AuthProvider';
 import {  Link } from "react-router-dom";
 
 
@@ -9,7 +10,9 @@ class Favorites extends Component {
   }
 
   componentDidMount(){
-    favorite.getFavorites(this.props.user)
+    const { id } = this.props.user._id;
+    console.log('ID->',id)
+    favorite.getFavorites(id)
       .then((favorites)=>this.setState({favorites}))
   }
 
@@ -31,4 +34,4 @@ class Favorites extends Component {
   }
 }
 
-export default Favorites;
+export default withAuth(Favorites);
