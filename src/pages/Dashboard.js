@@ -19,6 +19,7 @@ class Dashboard extends Component {
       <div>
       <Link to='/edit'><button >Edit Profile</button></Link>
       <Link to='/profile'><button >My Profile</button></Link>
+      <Link to='/favorites'><button>Favorites</button></Link>
       {profiles.map((profile, index)=>{
         return <Link key={profile._id} to={`userprofile/${profile._id}`}>
                   <p >{profile.username}</p>
