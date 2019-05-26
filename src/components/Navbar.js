@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import { withAuth } from "../lib/AuthProvider";
 
 class Navbar extends Component {
@@ -10,7 +10,7 @@ class Navbar extends Component {
       <div>
         {isLoggedin ? (
           <>
-            <p>username: {user.username}</p>
+           {/*  <p>username: {user.username}</p> */}
             <button onClick={logout}>Logout</button>
           </>
         ) : (

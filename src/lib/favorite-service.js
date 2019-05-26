@@ -13,7 +13,7 @@ class Favorite {
   }
 
   addFavorite(userId, favoriteId) {
-    return this.favorite.post("/", userId, favoriteId ).then(response => response.data);
+    return this.favorite.post("/", {userId, favoriteId }).then(response => response.data);
   }
 
 }

@@ -8,6 +8,10 @@ class MyProfile extends Component {
     console.log(this.props.user)
 
   }
+
+  componentDidUpdate() {
+    console.log('STATE -> ',this.state)
+  }
   render() {
     return (
       <div>
