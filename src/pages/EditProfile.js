@@ -8,22 +8,24 @@ class EditProfile extends Component {
     username: '',
     description: '',
     instruments: '',
-    genres: ''
+    genres: '',
+    image: ''
   }
 
   handleFormSubmit = (e) => {
     console.log('LOG', this.state, this.props.user)
     e.preventDefault();
-    const { username, description, instruments, genres } = this.state;
+    const { username, description, instruments, genres, image } = this.state;
     const { id } = this.props.match.params;
 
-    profile.editOne(username, description, instruments, genres, id)
+    profile.editOne(username, description, instruments, genres, id, image)
     this.setState({
       username: '',
       description: '',
       instruments: '',
       genres: '',
-      picture: ''
+      picture: '',
+      image: ''
     })
   }
 

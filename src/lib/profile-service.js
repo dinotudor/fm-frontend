@@ -21,7 +21,7 @@ class Profile {
 
 
   imageUpload(file) {
-    return this.profile.post('/picture', file)
+    return this.profile.post('/edit', file)
     .then(({data}) => data)
   }
 }

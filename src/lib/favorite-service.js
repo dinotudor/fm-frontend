@@ -8,8 +8,8 @@ class Favorite {
     });
   }
 
-  getFavorites() {
-    return this.favorite.get("/").then(response => response.data);
+  getFavorites(id) {
+    return this.profile.get(`/${id}`).then(response => response.data);
   }
 
   addFavorite(type, url, title, description, year, month, id) {
