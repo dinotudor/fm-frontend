@@ -27,7 +27,7 @@ class UserProfile extends Component {
     const { favoriteId } = this.props.match.params;
 
     favorite.addFavorite(userId, favoriteId)
-    this.setState(userId, favoriteId)
+     .then((data) => data);
 
   }
 
