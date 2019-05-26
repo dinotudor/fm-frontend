@@ -13,6 +13,7 @@ import Dashboard from './pages/Dashboard';
 import UserProfile from './components/UserProfile';
 import MyProfile from './pages/MyProfile';
 import EditProfile from './pages/EditProfile';
+import AddMedia from './pages/AddMedia';
 
 class App extends Component {
   render() {
@@ -29,6 +30,7 @@ class App extends Component {
             <PrivateRoute path="/userprofile/:id" component={UserProfile} />
             <PrivateRoute path="/profile" component={MyProfile} />
             <PrivateRoute path="/edit" component={EditProfile} />
+            <PrivateRoute path="/addmedia" component={AddMedia} />
           </Switch>
         </div>
       </AuthProvider>

@@ -17,7 +17,7 @@ class EditProfile extends Component {
     const { username, description, instruments, genres } = this.state;
     const { id } = this.props.match.params;
 
-    profile.editOne({ username, description, instruments, genres, id})
+    profile.editOne(username, description, instruments, genres, id)
     this.setState({
       username: '',
       description: '',
@@ -51,50 +51,51 @@ class EditProfile extends Component {
   render() {
     return (
       <div>
-
-          <form onSubmit={this.handleFormSubmit}>
-                <label>user Name:</label>
-                    <input
-                    type="text"
-                    name="username"
-                    value={this.username}
-                    onChange={this.handleChange}
-                    />
-
-                    <label>BIO:</label>
-                    <input
-                    type="text"
-                    name="description"
-                    value={this.description}
-                    onChange={this.handleChange}
-                    />
-
-                    <label>Instruments:</label>
-                    <input
-                    type="text"
-                    name="instruments"
-                    value={this.instruments}
-                    onChange={this.handleChange}
-                    />
-
-                    <label>City:</label>
-                    <input
-                    type="text"
-                    name="genres"
-                    value={this.genres}
-                    onChange={this.handleChange}
-                    />
-
-                    <label>Picture:</label>
-                    <input
-                      type="file"
-                      onChange={this.fileOnchange}
-                    />
-
-
-                <input type="submit" value="Send" />
-          </form>
         <Link to='/dashboard'><button >Home</button></Link>
+        <Link to='/addmedia'><button >Add Media</button></Link>
+        <form onSubmit={this.handleFormSubmit}>
+          <label>user Name:</label>
+            <input
+              type="text"
+              name="username"
+              value={this.username}
+              onChange={this.handleChange}
+            />
+
+            <label>BIO:</label>
+            <input
+              type="text"
+              name="description"
+              value={this.description}
+              onChange={this.handleChange}
+            />
+
+            <label>Instruments:</label>
+            <input
+              type="text"
+              name="instruments"
+              value={this.instruments}
+              onChange={this.handleChange}
+            />
+
+            <label>City:</label>
+            <input
+              type="text"
+              name="genres"
+              value={this.genres}
+              onChange={this.handleChange}
+            />
+
+            <label>Picture:</label>
+            <input
+              type="file"
+              onChange={this.fileOnchange}
+            />
+
+
+            <input type="submit" value="Send" />
+        </form>
+
       </div>
     )
   }

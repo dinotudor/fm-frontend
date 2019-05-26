@@ -11,15 +11,21 @@ class MyProfile extends Component {
   render() {
     return (
       <div>
-      <Link to='/edit'><button >Edit Profile</button></Link>
-      <Link to='/dashboard'><button >Home</button></Link>
-      <h1>{this.props.user.username}</h1>
-      <h4>BIO:</h4>
-      <p>{this.props.user.description}</p>
-      <h4>Instruments:</h4>
-      <p>{this.props.user.instruments}</p>
-      <h4>Genres:</h4>
-      <p>{this.props.user.genres}</p>
+        <Link to='/dashboard'><button >Home</button></Link>
+        <Link to='/edit'><button >Edit Profile</button></Link>
+        <Link to='/addmedia'><button >Add Media</button></Link>
+
+
+        <h1>{this.props.user.username}</h1>
+
+        <h4>BIO:</h4>
+        <p>{this.props.user.description}</p>
+
+        <h4>Instruments:</h4>
+        <p>{this.props.user.instruments}</p>
+
+        <h4>Genres:</h4>
+        <p>{this.props.user.genres}</p>
 
       </div>
     )

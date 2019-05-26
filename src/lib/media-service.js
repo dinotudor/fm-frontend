@@ -12,6 +12,10 @@ class Media {
     return this.media.get("/").then(response => response.data);
   }
 
+  addMedia() {
+    return this.media.post("/").then(response => response.data);
+  }
+
 }
 
 const media = new Media();

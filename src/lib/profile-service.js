@@ -16,8 +16,8 @@ class Profile {
     return this.profile.get(`/${id}`).then(response => response.data);
   }
 
-  editOne({ username, description, instruments, genres, id}) {
-    return this.profile.put('/edit').then(response => response.data);
+  editOne(username, description, instruments, genres, id) {
+    return this.profile.put('/edit',{ username, description, instruments, genres, id}).then(response => response.data);
   }
 
 
