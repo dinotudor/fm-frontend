@@ -21,6 +21,8 @@ class UserProfile extends Component {
     return (
       <div>
         <h1>USER profile </h1>
+        <Link to='/dashboard'><button >Home</button></Link>
+        <Link to='/profile'><button >My Profile</button></Link>
         <h4>Name</h4>
         <p>{profile.username}</p>
         <h4>BIO</h4>
@@ -29,7 +31,7 @@ class UserProfile extends Component {
         <p>{profile.instruments}</p>
         <h4>Likes</h4>
         <p>{profile.genres}</p>
-        <Link to='/dashboard'><button >back</button></Link>
+
       </div>
     )
   }

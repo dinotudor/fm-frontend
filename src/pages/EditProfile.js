@@ -22,7 +22,8 @@ class EditProfile extends Component {
       username: '',
       description: '',
       instruments: '',
-      genres: ''
+      genres: '',
+      picture: ''
     })
   }
 
@@ -84,7 +85,7 @@ class EditProfile extends Component {
                     onChange={this.handleChange}
                     />
 
-                    <label>Profile Photo:</label>
+                    <label>Picture:</label>
                     <input
                       type="file"
                       onChange={this.fileOnchange}

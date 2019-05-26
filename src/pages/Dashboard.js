@@ -17,11 +17,14 @@ class Dashboard extends Component {
     const {profiles} = this.state;
     return (
       <div>
+      <Link to='/edit'><button >Edit Profile</button></Link>
+      <Link to='/profile'><button >My Profile</button></Link>
       {profiles.map((profile, index)=>{
         return <Link key={profile._id} to={`userprofile/${profile._id}`}>
                   <p >{profile.username}</p>
               </Link>
       })}
+
       </div>
     )
   }
