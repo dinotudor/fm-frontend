@@ -15,10 +15,11 @@ class AddMedia extends Component {
 
   handleFormSubmit = (e) => {
     e.preventDefault();
-    const { type, url, title, description, year } = this.state;
+    console.log('ADD MEDIA FORM', this.state, this.props.user)
+    const { type, url, title, description, year, month } = this.state;
     const { id } = this.props.match.params;
 
-    media.addMedia({ type, url, title, description, year })
+    media.addMedia(type, url, title, description, year, month, id)
     this.setState({
       type: '',
       url: '',
@@ -48,6 +49,38 @@ class AddMedia extends Component {
             type="text"
             name="title"
             value={this.title}
+            onChange={this.handleChange}
+          />
+
+          <label>Type(song or video):</label>
+          <input
+            type="text"
+            name="type"
+            value={this.type}
+            onChange={this.handleChange}
+          />
+
+          <label>URL:</label>
+          <input
+            type="text"
+            name="url"
+            value={this.url}
+            onChange={this.handleChange}
+          />
+
+          <label>Description:</label>
+          <input
+            type="text"
+            name="description"
+            value={this.description}
+            onChange={this.handleChange}
+          />
+
+          <label>Year:</label>
+          <input
+            type="text"
+            name="year"
+            value={this.year}
             onChange={this.handleChange}
           />
 
