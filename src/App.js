@@ -15,6 +15,7 @@ import MyProfile from './pages/MyProfile';
 import EditProfile from './pages/EditProfile';
 import AddMedia from './pages/AddMedia';
 import Favorites from './pages/Favorites';
+import Media from './pages/Media';
 
 class App extends Component {
   render() {
@@ -33,6 +34,7 @@ class App extends Component {
             <PrivateRoute path="/edit" component={EditProfile} />
             <PrivateRoute path="/addmedia" component={AddMedia} />
             <PrivateRoute path="/favorites" component={Favorites} />
+            <PrivateRoute path="/media" component={Media} />
           </Switch>
         </div>
       </AuthProvider>

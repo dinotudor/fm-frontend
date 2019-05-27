@@ -22,7 +22,9 @@ class Dashboard extends Component {
       <Link to='/favorites'><button>Favorites</button></Link>
       {profiles.map((profile, index)=>{
         return <Link key={profile._id} to={`userprofile/${profile._id}`}>
-                  <p >{profile.username}</p>
+                  <h3>{profile.username}</h3>
+                  <p>{profile.genres}</p>
+                  <p>{profile.instruments}</p>
               </Link>
       })}
 

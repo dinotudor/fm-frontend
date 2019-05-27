@@ -9,8 +9,10 @@ class MyProfile extends Component {
 
   }
 
-  componentDidUpdate() {
-    console.log('STATE -> ',this.state)
+  componentDidUpdate(prevProps) {
+    if (this.props.user !== prevProps.user) {
+      this.fetchData(this.props.user);
+    }
   }
   render() {
     return (

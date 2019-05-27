@@ -27,7 +27,7 @@ class Favorites extends Component {
         <Link to='/profile'><button >My Profile</button></Link>
         <Link to='/addmedia'><button >Add Media</button></Link>
         {favorites.map((favorite, index)=>{
-        return  <p >{favorite.username}</p>
+        return  <p>{favorite.username}</p>
         })}
       </div>
     )
