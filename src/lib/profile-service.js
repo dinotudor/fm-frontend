@@ -7,6 +7,7 @@ class Profile {
       withCredentials: true
     });
   }
+
   getAll() {
     return this.profile.get("/").then(response => response.data);
   }

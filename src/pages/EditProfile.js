@@ -83,8 +83,8 @@ class EditProfile extends Component {
             <label>City:</label>
             <input
               type="text"
-              name="genres"
-              value={this.genres}
+              name="city"
+              value={this.city}
               onChange={this.handleChange}
             />
 

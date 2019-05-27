@@ -23,8 +23,8 @@ class UserProfile extends Component {
     e.preventDefault();
     console.log('FAVORITE ID -> ', this.props.match.params)
     console.log('USER ID -> ', this.props.user._id)
-    const { userId } = this.props.user._id;
-    const { favoriteId } = this.props.match.params;
+    const { _id: userId } = this.props.user;
+    const { id: favoriteId } = this.props.match.params;
 
     favorite.addFavorite(userId, favoriteId)
      .then((data) => data);

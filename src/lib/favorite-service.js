@@ -13,6 +13,7 @@ class Favorite {
   }
 
   addFavorite(userId, favoriteId) {
+    console.log('SERVICE ', {userId, favoriteId})
     return this.favorite.post("/", {userId, favoriteId }).then(response => response.data);
   }
 

@@ -5,26 +5,30 @@ import { Link } from "react-router-dom";
 
 class Media extends Component {
   state = {
-    medias: [],
+    media: [],
   }
 
   componentDidMount(){
     const { id } = this.props.match;
+    console.log('DID MOUNT', this.props.match)
     media.getMedia(id)
-      .then((medias)=>this.setState({medias}))
+      .then(({media})=>this.setState({media}))
   }
 
   render() {
-    const { medias } = this.state;
-    console.log('MEDIA', medias);
+    const { media } = this.state;
+    console.log('MEDIA', media);
     return (
       <div>
+        {
+          media.map((mediaObj) => <h1 key={mediaObj._id}>{mediaObj.url}</h1>)
+        }
         <Link to='/edit'><button >Edit Profile</button></Link>
         <Link to='/profile'><button >My Profile</button></Link>
         <Link to='/favorites'><button>Favorites</button></Link>
-          {
+          {/* {
             medias.map((media, index)=>{ return <p> {media} </p> })
-          }
+          } */}
 
       </div>
     )

@@ -25,6 +25,11 @@ class Dashboard extends Component {
                   <h3>{profile.username}</h3>
                   <p>{profile.genres}</p>
                   <p>{profile.instruments}</p>
+                  {
+                    profile.media.map((mediaObj) =>{
+                      return <p key={mediaObj._id}>{mediaObj.url}</p>
+                    })
+                  }
               </Link>
       })}
 
