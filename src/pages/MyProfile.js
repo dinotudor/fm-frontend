@@ -39,6 +39,7 @@ class MyProfile extends Component {
           <h1>LOADING</h1>
           :
           <div>
+            <img src={this.state.user.image} alt="pic"/>
             <h1>{this.state.user.username}</h1>
 
             <h4>BIO:</h4>

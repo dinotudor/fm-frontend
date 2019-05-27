@@ -41,6 +41,7 @@ class UserProfile extends Component {
         <Link to='/profile'><button >My Profile</button></Link>
         <Link to='/favorites'><button>Favorites</button></Link>
         <h1>{profile.username}</h1>
+        <img src={profile.image} alt="pic"/>
         <h4>BIO</h4>
         <p>{profile.description}</p>
         <h4>instruments</h4>
