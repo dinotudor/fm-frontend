@@ -17,17 +17,21 @@ class EditProfile extends Component {
     console.log('LOG', this.state, this.props.user)
     e.preventDefault();
     const { username, description, instruments, genres, image, city } = this.state;
-    const { id } = this.props.match.params;
 
-    profile.editOne(username, description, instruments, genres, id, image, city)
-    this.setState({
-      username: '',
-      description: '',
-      instruments: '',
-      genres: '',
-      city: '',
-      image: ''
-    })
+    profile.editOne(username, description, instruments, genres, city, image)
+      .then(()=>{
+        this.setState({
+          username: '',
+          description: '',
+          instruments: '',
+          genres: '',
+          city: '',
+          image: ''
+        })
+
+      }
+        )
+
   }
 
   handleChange = event => {
@@ -52,6 +56,7 @@ class EditProfile extends Component {
 
 
   render() {
+    console.log(this.state);
     return (
       <div>
         <Link to='/profile'><button>My profile</button></Link>
