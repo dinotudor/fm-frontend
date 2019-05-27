@@ -5,6 +5,8 @@
   flex-direction: column;
   text-align: center; }
   .login-form {
+    color: #7c7c7c;
+    font-size: 1.2rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -14,7 +16,7 @@
     margin: 12px;
     border-radius: 33px;
     border-style: solid;
-    border-color: #570003;
+    border-color: #0313ee;
     font-size: 17px;
     padding: 16px 30px; }
   .login .btn {
@@ -23,7 +25,7 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    background: linear-gradient(96deg, #f1373c 0%, #ff7a01 100%);
+    background: linear-gradient(180deg, #0313ee 0%, #00a89a 100%);
     margin: 8px 19px;
     padding: 16px 43px;
     border-radius: 32px; }
