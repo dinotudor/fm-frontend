@@ -9,6 +9,7 @@ class EditProfile extends Component {
     description: '',
     instruments: '',
     genres: '',
+    city: '',
     image: ''
   }
 
@@ -54,7 +55,7 @@ class EditProfile extends Component {
   render() {
     return (
       <div>
-        <Link to='/dashboard'><button >Home</button></Link>
+        <Link to='/profile'><button>My profile</button></Link>
         <Link to='/addmedia'><button >Add Media</button></Link>
         <Link to='/favorites'><button>Favorites</button></Link>
         <form onSubmit={this.handleFormSubmit}>

@@ -40,8 +40,9 @@ class AddMedia extends Component {
   render() {
     return (
       <div>
-        <Link to='/dashboard'><button >Home</button></Link>
         <Link to='/profile'><button >My Profile</button></Link>
+        <Link to='/edit'><button >Edit Profile</button></Link>
+        <Link to='/favorites'><button>Favorites</button></Link>
         <form onSubmit={this.handleFormSubmit}>
 
           <label>Title:</label>

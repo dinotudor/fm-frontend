@@ -55,7 +55,7 @@ class UserProfile extends Component {
             })
           }
         <form onSubmit={this.handleFormSubmit}>
-          <input type="submit" value="Add Favorite" />
+          <input type="submit" value="Add to favorites" />
         </form>
 
       </div>

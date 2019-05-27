@@ -23,11 +23,6 @@ class Dashboard extends Component {
         return <Link key={profile._id} to={`userprofile/${profile._id}`}>
                   <h3>{profile.username}</h3>
                   <p>Instruments: {profile.instruments} Genres:{profile.genres} City{profile.city}</p>
-{/*                   {
-                    profile.media.map((mediaObj) =>{
-                      return <p key={mediaObj._id}>{mediaObj.url}</p>
-                    })
-                  } */}
               </Link>
       })}
 
