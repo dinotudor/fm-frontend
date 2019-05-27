@@ -11,7 +11,10 @@ class Navbar extends Component {
         {isLoggedin ? (
           <>
            {/*  <p>username: {user.username}</p> */}
-            <button onClick={logout}>Logout</button>
+          <Link to='/dashboard'><button >Home</button></Link>
+          <Link to='/profile'><button >My Profile</button></Link>
+          <Link to='/favorites'><button>Favorites</button></Link>
+          <button onClick={logout}>Logout</button>
           </>
         ) : (
           <>

@@ -59,9 +59,6 @@ class EditProfile extends Component {
     console.log(this.state);
     return (
       <div>
-        <Link to='/profile'><button>My profile</button></Link>
-        <Link to='/addmedia'><button >Add Media</button></Link>
-        <Link to='/favorites'><button>Favorites</button></Link>
         <h3>Edit Profile</h3>
         <form onSubmit={this.handleFormSubmit}>
           <label>User Name:</label>

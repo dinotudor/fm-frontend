@@ -37,9 +37,6 @@ class UserProfile extends Component {
     console.log('USER ID', profile)
     return (
       <div>
-        <Link to='/dashboard'><button >Home</button></Link>
-        <Link to='/profile'><button >My Profile</button></Link>
-        <Link to='/favorites'><button>Favorites</button></Link>
         <h1>{profile.username}</h1>
         <img src={profile.image} alt="pic"/>
         <h4>BIO</h4>
@@ -52,7 +49,7 @@ class UserProfile extends Component {
 {/*         <ReactPlayer url='https://soundcloud.com/dino-tudor/tripout-afternoon-remix' playing /> */}
           {
             profile.media.map((mediaObj) =>{
-              return <ReactPlayer key={mediaObj._id}url={mediaObj.url} playing />
+              return <ReactPlayer key={mediaObj._id}url={mediaObj.url} />
             })
           }
         <form onSubmit={this.handleFormSubmit}>

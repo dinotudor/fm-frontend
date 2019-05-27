@@ -17,8 +17,6 @@ class Dashboard extends Component {
     const {profiles} = this.state;
     return (
       <div>
-      <Link to='/profile'><button >My Profile</button></Link>
-      <Link to='/favorites'><button>Favorites</button></Link>
       <h3>Dashboard</h3>
       {profiles.map((profile, index)=>{
         return <Link key={profile._id} to={`userprofile/${profile._id}`}>

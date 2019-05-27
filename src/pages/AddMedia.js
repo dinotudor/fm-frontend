@@ -40,9 +40,6 @@ class AddMedia extends Component {
   render() {
     return (
       <div>
-        <Link to='/profile'><button >My Profile</button></Link>
-        <Link to='/edit'><button >Edit Profile</button></Link>
-        <Link to='/favorites'><button>Favorites</button></Link>
         <h3>Add Media</h3>
         <form onSubmit={this.handleFormSubmit}>
 

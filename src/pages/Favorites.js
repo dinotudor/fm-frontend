@@ -22,11 +22,9 @@ class Favorites extends Component {
     console.log('FAVORITES BY USER -> ',favorites);
     return(
       <div>
-        <Link to='/dashboard'><button >Home</button></Link>
-        <Link to='/profile'><button >My Profile</button></Link>
         <h3>Favorites</h3>
         {favorites.map((favoriteObj, index)=>{
-        return  <Link key={favoriteObj._id} to={`userprofile/${favoriteObj._id}`}><p>{favoriteObj.username}</p></Link>
+        return  <Link key={favoriteObj._id} to={`userprofile/${favoriteObj._id}`}><p>{favoriteObj.username}</p><img src={favoriteObj.image} alt='favPic'/></Link>
         })}
       </div>
     )
