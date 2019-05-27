@@ -43,12 +43,14 @@ class AddMedia extends Component {
         <Link to='/profile'><button >My Profile</button></Link>
         <Link to='/edit'><button >Edit Profile</button></Link>
         <Link to='/favorites'><button>Favorites</button></Link>
+        <h3>Add Media</h3>
         <form onSubmit={this.handleFormSubmit}>
 
           <label>Title:</label>
           <input
             type="text"
             name="title"
+            placeholder="title"
             value={this.title}
             onChange={this.handleChange}
           />
@@ -57,6 +59,7 @@ class AddMedia extends Component {
           <input
             type="text"
             name="type"
+            placeholder="type"
             value={this.type}
             onChange={this.handleChange}
           />
@@ -65,6 +68,7 @@ class AddMedia extends Component {
           <input
             type="text"
             name="url"
+            placeholder="url"
             value={this.url}
             onChange={this.handleChange}
           />
@@ -73,6 +77,7 @@ class AddMedia extends Component {
           <input
             type="text"
             name="description"
+            placeholder="description"
             value={this.description}
             onChange={this.handleChange}
           />
@@ -81,6 +86,7 @@ class AddMedia extends Component {
           <input
             type="text"
             name="year"
+            placeholder="year"
             value={this.year}
             onChange={this.handleChange}
           />
