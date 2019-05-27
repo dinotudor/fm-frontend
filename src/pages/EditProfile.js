@@ -56,6 +56,7 @@ class EditProfile extends Component {
       <div>
         <Link to='/dashboard'><button >Home</button></Link>
         <Link to='/addmedia'><button >Add Media</button></Link>
+        <Link to='/favorites'><button>Favorites</button></Link>
         <form onSubmit={this.handleFormSubmit}>
           <label>User Name:</label>
             <input

@@ -3,10 +3,11 @@ import profile from '../lib/profile-service';
 import {withAuth} from './../lib/AuthProvider';
 import { Link } from 'react-router-dom';
 import favorite from './../lib/favorite-service';
+import ReactPlayer from 'react-player'
 
 class UserProfile extends Component {
   state = {
-    profile: [],
+    profile: {media: []},
   }
 
   componentDidMount(){
@@ -14,9 +15,9 @@ class UserProfile extends Component {
     const { id } = this.props.match.params;
     profile.getOne(id)
       .then((profile)=> {
-      console.log(profile)
-      this.setState({profile})
-    })
+        console.log('DID MOUNT USER PROF',profile)
+        this.setState({profile})
+      })
   }
 
   handleFormSubmit = (e) => {
@@ -38,6 +39,7 @@ class UserProfile extends Component {
       <div>
         <Link to='/dashboard'><button >Home</button></Link>
         <Link to='/profile'><button >My Profile</button></Link>
+        <Link to='/favorites'><button>Favorites</button></Link>
         <h1>{profile.username}</h1>
         <h4>BIO</h4>
         <p>{profile.description}</p>
@@ -45,6 +47,13 @@ class UserProfile extends Component {
         <p>{profile.instruments}</p>
         <h4>Genres</h4>
         <p>{profile.city}</p>
+
+{/*         <ReactPlayer url='https://soundcloud.com/dino-tudor/tripout-afternoon-remix' playing /> */}
+          {
+            profile.media.map((mediaObj) =>{
+              return <ReactPlayer key={mediaObj._id}url={mediaObj.url} playing />
+            })
+          }
         <form onSubmit={this.handleFormSubmit}>
           <input type="submit" value="Add Favorite" />
         </form>

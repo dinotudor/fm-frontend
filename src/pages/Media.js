@@ -20,15 +20,12 @@ class Media extends Component {
     console.log('MEDIA', media);
     return (
       <div>
-        {
-          media.map((mediaObj) => <h1 key={mediaObj._id}>{mediaObj.title}</h1>)
-        }
         <Link to='/edit'><button >Edit Profile</button></Link>
         <Link to='/profile'><button >My Profile</button></Link>
         <Link to='/favorites'><button>Favorites</button></Link>
-          {/* {
-            medias.map((media, index)=>{ return <p> {media} </p> })
-          } */}
+        {
+          media.map((mediaObj) => <h1 key={mediaObj._id}>{mediaObj.title}</h1>)
+        }
 
       </div>
     )

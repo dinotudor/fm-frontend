@@ -32,6 +32,7 @@ class MyProfile extends Component {
         <Link to='/dashboard'><button >Home</button></Link>
         <Link to='/edit'><button >Edit Profile</button></Link>
         <Link to='/addmedia'><button >Add Media</button></Link>
+        <Link to='/favorites'><button>Favorites</button></Link>
         {
           !this.state.user ?
           <h1>LOADING</h1>

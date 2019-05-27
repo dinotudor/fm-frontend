@@ -24,11 +24,9 @@ class Favorites extends Component {
       <div>
         <h1>Favorites</h1>
         <Link to='/dashboard'><button >Home</button></Link>
-        <Link to='/edit'><button >Edit Profile</button></Link>
         <Link to='/profile'><button >My Profile</button></Link>
-        <Link to='/addmedia'><button >Add Media</button></Link>
-        {favorites.map((favorite, index)=>{
-        return  <h4>{favorite.username}</h4>
+        {favorites.map((favoriteObj, index)=>{
+        return  <h4 key={favoriteObj._id}>{favoriteObj.username}</h4>
         })}
       </div>
     )

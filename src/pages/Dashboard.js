@@ -17,19 +17,17 @@ class Dashboard extends Component {
     const {profiles} = this.state;
     return (
       <div>
-      <Link to='/edit'><button >Edit Profile</button></Link>
       <Link to='/profile'><button >My Profile</button></Link>
       <Link to='/favorites'><button>Favorites</button></Link>
       {profiles.map((profile, index)=>{
         return <Link key={profile._id} to={`userprofile/${profile._id}`}>
                   <h3>{profile.username}</h3>
-                  <p>{profile.genres}</p>
-                  <p>{profile.instruments}</p>
-                  {
+                  <p>Instruments: {profile.instruments} Genres:{profile.genres} City{profile.city}</p>
+{/*                   {
                     profile.media.map((mediaObj) =>{
                       return <p key={mediaObj._id}>{mediaObj.url}</p>
                     })
-                  }
+                  } */}
               </Link>
       })}
 
