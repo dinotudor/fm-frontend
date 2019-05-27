@@ -10,10 +10,11 @@ class Favorites extends Component {
   }
 
   componentDidMount(){
-    const { id } = this.props.user._id;
-    console.log('ID->',id)
-    favorite.getFavorites(id)
-      .then((favorites)=>this.setState({favorites}))
+    console.log('PROPS->',this.props)
+    const { _id } = this.props.user;
+    console.log('ID->',_id)
+    favorite.getFavorites(_id)
+      .then(({favorites})=>this.setState({favorites}))
   }
 
   render() {
@@ -27,7 +28,7 @@ class Favorites extends Component {
         <Link to='/profile'><button >My Profile</button></Link>
         <Link to='/addmedia'><button >Add Media</button></Link>
         {favorites.map((favorite, index)=>{
-        return  <p>{favorite.username}</p>
+        return  <h4>{favorite.username}</h4>
         })}
       </div>
     )

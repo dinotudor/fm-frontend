@@ -21,7 +21,7 @@ class Media extends Component {
     return (
       <div>
         {
-          media.map((mediaObj) => <h1 key={mediaObj._id}>{mediaObj.url}</h1>)
+          media.map((mediaObj) => <h1 key={mediaObj._id}>{mediaObj.title}</h1>)
         }
         <Link to='/edit'><button >Edit Profile</button></Link>
         <Link to='/profile'><button >My Profile</button></Link>

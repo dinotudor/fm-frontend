@@ -44,7 +44,7 @@ class UserProfile extends Component {
         <h4>instruments</h4>
         <p>{profile.instruments}</p>
         <h4>Genres</h4>
-        <p>{profile.genres}</p>
+        <p>{profile.city}</p>
         <form onSubmit={this.handleFormSubmit}>
           <input type="submit" value="Add Favorite" />
         </form>

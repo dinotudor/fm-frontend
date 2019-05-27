@@ -15,16 +15,17 @@ class EditProfile extends Component {
   handleFormSubmit = (e) => {
     console.log('LOG', this.state, this.props.user)
     e.preventDefault();
-    const { username, description, instruments, genres, image } = this.state;
+    const { username, description, instruments, genres, image, city } = this.state;
     const { id } = this.props.match.params;
 
-    profile.editOne(username, description, instruments, genres, id, image)
+    profile.editOne(username, description, instruments, genres, id, image, city)
     this.setState({
       username: '',
       description: '',
       instruments: '',
       genres: '',
       picture: '',
+      city: '',
       image: ''
     })
   }
@@ -56,10 +57,11 @@ class EditProfile extends Component {
         <Link to='/dashboard'><button >Home</button></Link>
         <Link to='/addmedia'><button >Add Media</button></Link>
         <form onSubmit={this.handleFormSubmit}>
-          <label>user Name:</label>
+          <label>User Name:</label>
             <input
               type="text"
               name="username"
+              placeholder="username"
               value={this.username}
               onChange={this.handleChange}
             />
@@ -68,6 +70,7 @@ class EditProfile extends Component {
             <input
               type="text"
               name="description"
+              placeholder="description"
               value={this.description}
               onChange={this.handleChange}
             />
@@ -76,6 +79,7 @@ class EditProfile extends Component {
             <input
               type="text"
               name="instruments"
+              placeholder="instruments"
               value={this.instruments}
               onChange={this.handleChange}
             />
@@ -84,7 +88,17 @@ class EditProfile extends Component {
             <input
               type="text"
               name="city"
+              placeholder="city"
               value={this.city}
+              onChange={this.handleChange}
+            />
+
+            <label>Genres:</label>
+            <input
+              type="text"
+              name="genres"
+              placeholder="genres"
+              value={this.genres}
               onChange={this.handleChange}
             />
 
