@@ -2,8 +2,9 @@ import axios from "axios";
 
 class Favorite {
   constructor() {
+
     this.favorite = axios.create({
-      baseURL: "http://localhost:5000/favorites",
+      baseURL: process.env.REACT_APP_API_URL,
       withCredentials: true
     });
   }

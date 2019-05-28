@@ -3,7 +3,7 @@ import axios from "axios";
 class Media {
   constructor() {
     this.media = axios.create({
-      baseURL: "http://localhost:5000/media",
+      baseURL: process.env.REACT_APP_API_URL,
       withCredentials: true
     });
   }
