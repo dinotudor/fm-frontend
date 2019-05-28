@@ -25,7 +25,7 @@ class Login extends Component {
         <form className="login-form" onSubmit={this.handleFormSubmit}>
           <label>username</label>
           <input
-            className="login-input"
+            className="input-field"
             type="text"
             name="username"
             placeholder="username"
@@ -34,14 +34,14 @@ class Login extends Component {
           />
           <label>password</label>
           <input
-            className="login-input"
+            className="input-field"
             type="password"
             name="password"
             placeholder="*****"
             value={password}
             onChange={this.handleChange}
           />
-          <input className="btn" type="submit" value="Login" />
+          <button className="waves-effect waves-light btn-small" type="submit">login <i className="material-icons">check_circle</i></button>
         </form>
       </div>
     );

@@ -37,18 +37,25 @@ class UserProfile extends Component {
     console.log('USER ID', profile)
     return (
       <div>
-        <h1>{profile.username}</h1>
-        <form onSubmit={this.handleFormSubmit}>
-          <input type="submit" value="Add to favorites" />
-        </form>
-        <br/>
-        <img src={profile.image} alt="pic"/>
-        <h4>BIO</h4>
-        <p>{profile.description}</p>
-        <h4>instruments</h4>
-        <p>{profile.instruments}</p>
-        <h4>Genres</h4>
-        <p>{profile.city}</p>
+        <div className="row">
+          <div className="col s12 m6">
+            <div className="card">
+            <div className="card-image">
+              <img src={profile.image} alt="pic"/>
+              <button onClick={this.handleFormSubmit} className="btn-floating halfway-fab waves-effect waves-light green"><i class="material-icons">add</i></button>
+            </div>
+            <div className="card-content">
+              <h3>{profile.username}</h3>
+              <h4>Bio</h4>
+              <p>{profile.description}</p>
+              <h4>instruments</h4>
+              <p>{profile.instruments}</p>
+              <h4>Genres</h4>
+              <p>{profile.city}</p>
+            </div>
+          </div>
+        </div>
+      </div>
           {
             profile.media.map((mediaObj) =>{
               return <ReactPlayer key={mediaObj._id}url={mediaObj.url} />
@@ -62,3 +69,18 @@ class UserProfile extends Component {
 }
 
 export default withAuth(UserProfile);
+
+/*   <div class="row">
+    <div class="col s12 m6">
+      <div class="card">
+        <div class="card-image">
+          <img src="images/sample-1.jpg">
+          <span class="card-title">Card Title</span>
+          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+        </div>
+        <div class="card-content">
+          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+        </div>
+      </div>
+    </div>
+  </div> */

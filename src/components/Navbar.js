@@ -7,15 +7,15 @@ class Navbar extends Component {
     const { user, logout, isLoggedin } = this.props;
 
     return (
-      <nav className="nav-parent">
-        <div className="center">
+      <nav className="nav-wrapper purple darken-3 center">
+        <div className="">
           {isLoggedin ? (
             <>
             {/*  <p>username: {user.username}</p> */}
             <Link className="waves-effect waves-light btn-small" to='/dashboard'>Home</Link>
             <Link className="waves-effect waves-light btn-small" to='/profile'>My Profile</Link>
             <Link className="waves-effect waves-light btn-small" to='/favorites'>Favorites</Link>
-            <button className="waves-effect waves-light btn-small" onClick={logout}>Logout</button>
+            <button className="waves-effect waves-light btn-small material-icons" onClick={logout}>exit_to_app</button>
             </>
           ) : (
             <>

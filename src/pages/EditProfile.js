@@ -10,7 +10,8 @@ class EditProfile extends Component {
     instruments: '',
     genres: '',
     city: '',
-    image: ''
+    image: '',
+    disable: true
   }
 
   handleFormSubmit = (e) => {
@@ -28,6 +29,8 @@ class EditProfile extends Component {
           city: '',
           image: ''
         })
+
+        this.props.history.push('/profile');
 
       }
         )
@@ -54,9 +57,18 @@ class EditProfile extends Component {
     .catch((error) => console.log(error))
   }
 
+  componentDidMount() {
+    profile.getOne(this.props.user._id)
+      .then((data) =>{
+        const { username, city, description, instruments, genres, image} = data;
+        this.setState({ username, city, description, instruments, genres, image})
+      })
+  }
+
 
   render() {
     console.log(this.state);
+    const { disable } = this.state;
     return (
       <div>
         <h3>Edit Profile</h3>
@@ -112,8 +124,7 @@ class EditProfile extends Component {
               onChange={this.fileOnchange}
             />
 
-
-            <input className="waves-effect waves-light btn-small" type="submit" value="Send" />
+            <button className="btn waves-effect waves-light material-icons" type="submit" value="Send" disabled={disable}>send</button>
         </form>
 
       </div>

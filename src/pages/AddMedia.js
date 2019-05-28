@@ -88,7 +88,7 @@ class AddMedia extends Component {
             onChange={this.handleChange}
           />
 
-          <input className="waves-effect waves-light btn-small" type="submit" value="Send" />
+          <button className="btn waves-effect waves-light material-icons" type="submit" value="Send">send</button>
         </form>
       </div>
     )

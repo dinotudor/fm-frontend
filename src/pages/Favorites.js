@@ -33,15 +33,29 @@ class Favorites extends Component {
     console.log('FAVORITES BY USER -> ',favorites);
     return(
       <div>
-        <h3>Favorites</h3>
+      <div className="card-panel">
+        <h4 className="blue-text text-darken-2">Favorites</h4>
+      </div>
         {favorites.map((favoriteObj, index)=>{
-        return <div>
-            <button className="waves-effect waves-light btn-small" onClick={()=>{this.deleteFavorite(favoriteObj._id)}}>Delete Favorite</button><br/>
-            <Link key={favoriteObj._id} to={`userprofile/${favoriteObj._id}`}>
-              <p>{favoriteObj.username}</p>
-              <img src={favoriteObj.image} alt='favPic'/>
-            </Link>
-          </div>
+        return <div className="row">
+                <div className="col s12 m6">
+                  <div className="card">
+                    <div className="card-image">
+                     <img src={favoriteObj.image} alt='favPic'/>
+                     <span className="card-title"><i class="material-icons medium">favorite</i></span>
+                     <button className="btn-floating btn-medium waves-effect waves-light right red" onClick={()=>{this.deleteFavorite(favoriteObj._id)}}><i class="material-icons">remove</i></button>
+                    </div>
+                    <Link key={favoriteObj._id} to={`userprofile/${favoriteObj._id}`}>
+                    <div className="card-content">
+                      <h4>{favoriteObj.username}</h4>
+                      <p>{favoriteObj.city}</p>
+                      <p>{favoriteObj.instruments}</p>
+                    </div>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
         })}
       </div>
     )
@@ -49,3 +63,4 @@ class Favorites extends Component {
 }
 
 export default withAuth(Favorites);
+
