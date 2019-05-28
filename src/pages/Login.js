@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { withAuth } from "../lib/AuthProvider";
+import { Link } from "react-router-dom";
 
 class Login extends Component {
   state = {
@@ -41,8 +42,12 @@ class Login extends Component {
             value={password}
             onChange={this.handleChange}
           />
-          <button className="waves-effect waves-light btn-small" type="submit">login <i className="material-icons">check_circle</i></button>
+          <button className="waves-effect waves-light btn-large" type="submit">login <i className="material-icons">check_circle</i></button>
         </form>
+        <p>
+          Dont have an account?<br/>
+          <Link className="waves-effect waves-light btn-large" to={"/signup"}>Signup</Link>
+        </p>
       </div>
     );
   }

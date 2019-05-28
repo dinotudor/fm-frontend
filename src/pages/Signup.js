@@ -46,11 +46,11 @@ class Signup extends Component {
             value={password}
             onChange={this.handleChange}
           />
-          <input className="waves-effect waves-light btn-small" type="submit" value="Signup" />
+          <input className="waves-effect waves-light btn-large" type="submit" value="Signup" />
         </form>
         <p>
-          Already have account?
-          <Link className="waves-effect waves-light btn-small" to={"/login"}> Login</Link>
+          Already have account?<br/>
+          <Link className="waves-effect waves-light btn-large" to={"/login"}> Login</Link>
         </p>
       </div>
     );

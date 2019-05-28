@@ -33,24 +33,33 @@ class MyProfile extends Component {
           <Link className="waves-effect waves-light btn-small" to='/edit'>Edit Profile</Link>
           <Link className="waves-effect waves-light btn-small" to='/addmedia'>Add Media</Link>
         </div>
-        <h3>My Profile</h3>
+       <div className="card-panel">
+          <h4 className="blue-text text-darken-2">my profile</h4>
+        </div>
         {
           !this.state.user ?
           <h1>LOADING</h1>
           :
           <div>
-            <img src={this.state.user.image} alt="pic"/>
-            <h1>{this.state.user.username}</h1>
-
-            <h4>BIO:</h4>
-            <p>{this.state.user.description}</p>
-
-            <h4>Instruments:</h4>
-            <p>{this.state.user.instruments}</p>
-
-            <h4>City:</h4>
-            <p>{this.state.user.city}</p>
-
+            <div className="row">
+              <div className="col s12 m6">
+                <div className="card">
+                  <div className="card-image">
+                    <img src={this.state.user.image} alt="pic"/>
+                    <span className="card-title"><i class="material-icons medium">local_activity</i></span>
+                  </div>
+                <div className="card-content">
+                  <h1>{this.state.user.username}</h1>
+                  <h4>Bio:</h4>
+                  <p>{this.state.user.description}</p>
+                  <h4>Instruments:</h4>
+                  <p>{this.state.user.instruments}</p>
+                  <h4>City:</h4>
+                  <p>{this.state.user.city}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         }
       </div>

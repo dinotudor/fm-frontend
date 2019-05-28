@@ -19,8 +19,9 @@ class Navbar extends Component {
             </>
           ) : (
             <>
-              <Link to="/login">Login</Link>
-              <Link to="/signup">Signup</Link>
+            <h4 className="white-text"><i className="material-icons">library_music</i></h4>
+{/*               <Link className="waves-effect waves-light btn-small" to="/login">Login</Link>
+              <Link className="waves-effect waves-light btn-small" to="/signup">Signup</Link> */}
             </>
           )}
         </div>
