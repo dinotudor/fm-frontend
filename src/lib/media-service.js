@@ -3,7 +3,7 @@ import axios from "axios";
 class Media {
   constructor() {
     this.media = axios.create({
-      baseURL: process.env.REACT_APP_API_URL,
+      baseURL: process.env.REACT_APP_API_URL+"/media",
       withCredentials: true
     });
   }

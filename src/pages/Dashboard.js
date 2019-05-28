@@ -10,7 +10,8 @@ class Dashboard extends Component {
 
   componentDidMount(){
     profile.getAll()
-      .then((profiles)=>this.setState({profiles}))
+      .then((profiles)=>{
+        this.setState({profiles})})
   }
 
   render() {
