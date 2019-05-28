@@ -22,7 +22,9 @@ class Dashboard extends Component {
       {profiles.map((profile, index)=>{
         return <Link key={profile._id} to={`userprofile/${profile._id}`}>
                   <h3>{profile.username}</h3>
-                  <p>Instruments: {profile.instruments} Genres:{profile.genres} City{profile.city}</p>
+                  <img src={profile.image} alt="pic"/>
+                  <p>Instruments: {profile.instruments} <br />
+                     City:{profile.city}</p>
               </Link>
       })}
 

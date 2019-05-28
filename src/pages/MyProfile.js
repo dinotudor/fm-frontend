@@ -29,8 +29,10 @@ class MyProfile extends Component {
   render() {
     return (
       <div>
-        <Link to='/edit'><button >Edit Profile</button></Link>
-        <Link to='/addmedia'><button >Add Media</button></Link>
+        <div className="center">
+          <Link className="waves-effect waves-light btn-small" to='/edit'>Edit Profile</Link>
+          <Link className="waves-effect waves-light btn-small" to='/addmedia'>Add Media</Link>
+        </div>
         <h3>My Profile</h3>
         {
           !this.state.user ?
@@ -48,6 +50,7 @@ class MyProfile extends Component {
 
             <h4>City:</h4>
             <p>{this.state.user.city}</p>
+
           </div>
         }
       </div>

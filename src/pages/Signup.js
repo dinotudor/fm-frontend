@@ -28,10 +28,11 @@ class Signup extends Component {
   render() {
     const { username, password } = this.state;
     return (
-      <div>
-        <form onSubmit={this.handleFormSubmit}>
+      <div className="signup">
+        <form className="signup-form" onSubmit={this.handleFormSubmit}>
           <label>Username:</label>
           <input
+            className="signup-input"
             type="text"
             name="username"
             value={username}
@@ -39,16 +40,17 @@ class Signup extends Component {
           />
           <label>Password:</label>
           <input
+            className="signup-input"
             type="password"
             name="password"
             value={password}
             onChange={this.handleChange}
           />
-          <input type="submit" value="Signup" />
+          <input className="waves-effect waves-light btn-small" type="submit" value="Signup" />
         </form>
         <p>
           Already have account?
-          <Link to={"/login"}> Login</Link>
+          <Link className="waves-effect waves-light btn-small" to={"/login"}> Login</Link>
         </p>
       </div>
     );

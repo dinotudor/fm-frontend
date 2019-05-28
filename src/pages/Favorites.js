@@ -24,6 +24,7 @@ class Favorites extends Component {
     favorite.deleteFavorite(id)
       .then(() => {
         this.getAllFavorites()
+
       })
   }
 
@@ -35,11 +36,11 @@ class Favorites extends Component {
         <h3>Favorites</h3>
         {favorites.map((favoriteObj, index)=>{
         return <div>
-          <Link key={favoriteObj._id} to={`userprofile/${favoriteObj._id}`}>
-            <p>{favoriteObj.username}</p>
-            <img src={favoriteObj.image} alt='favPic'/>
-          </Link><br/>
-          <button onClick={()=>{this.deleteFavorite(favoriteObj._id)}}>Delete Favorite</button>
+            <button className="waves-effect waves-light btn-small" onClick={()=>{this.deleteFavorite(favoriteObj._id)}}>Delete Favorite</button><br/>
+            <Link key={favoriteObj._id} to={`userprofile/${favoriteObj._id}`}>
+              <p>{favoriteObj.username}</p>
+              <img src={favoriteObj.image} alt='favPic'/>
+            </Link>
           </div>
         })}
       </div>

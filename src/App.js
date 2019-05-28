@@ -22,7 +22,6 @@ class App extends Component {
     return (
       <AuthProvider>
         <div className="container">
-          <h1>FM - Find Musician</h1>
           <Navbar />
           <Switch>
             <AnonRoute path="/signup" component={Signup} />

@@ -113,7 +113,7 @@ class EditProfile extends Component {
             />
 
 
-            <input type="submit" value="Send" />
+            <input className="waves-effect waves-light btn-small" type="submit" value="Send" />
         </form>
 
       </div>
