@@ -49,8 +49,6 @@ class UserProfile extends Component {
         <p>{profile.instruments}</p>
         <h4>Genres</h4>
         <p>{profile.city}</p>
-
-{/*         <ReactPlayer url='https://soundcloud.com/dino-tudor/tripout-afternoon-remix' playing /> */}
           {
             profile.media.map((mediaObj) =>{
               return <ReactPlayer key={mediaObj._id}url={mediaObj.url} />

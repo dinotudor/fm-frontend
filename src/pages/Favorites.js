@@ -9,12 +9,22 @@ class Favorites extends Component {
     favorites: [],
   }
 
-  componentDidMount(){
+  getAllFavorites = () => {
     console.log('PROPS->',this.props)
     const { _id } = this.props.user;
     console.log('ID->',_id)
     favorite.getFavorites(_id)
       .then(({favorites})=>this.setState({favorites}))
+  }
+
+  componentDidMount(){
+    this.getAllFavorites()
+  }
+  deleteFavorite = (id) => {
+    favorite.deleteFavorite(id)
+      .then(() => {
+        this.getAllFavorites()
+      })
   }
 
   render() {
@@ -24,7 +34,13 @@ class Favorites extends Component {
       <div>
         <h3>Favorites</h3>
         {favorites.map((favoriteObj, index)=>{
-        return  <Link key={favoriteObj._id} to={`userprofile/${favoriteObj._id}`}><p>{favoriteObj.username}</p><img src={favoriteObj.image} alt='favPic'/></Link>
+        return <div>
+          <Link key={favoriteObj._id} to={`userprofile/${favoriteObj._id}`}>
+            <p>{favoriteObj.username}</p>
+            <img src={favoriteObj.image} alt='favPic'/>
+          </Link><br/>
+          <button onClick={()=>{this.deleteFavorite(favoriteObj._id)}}>Delete Favorite</button>
+          </div>
         })}
       </div>
     )

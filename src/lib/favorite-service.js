@@ -17,6 +17,9 @@ class Favorite {
     console.log('SERVICE ', {userId, favoriteId})
     return this.favorite.post("/", {userId, favoriteId }).then(response => response.data);
   }
+  deleteFavorite(id) {
+    return this.favorite.delete(`/${id}`).then(response => response.data);
+  }
 
 }
 
