@@ -1,4 +1,5 @@
 .login {
+  background:#eee;
   height: 100vh;
   justify-content: space-evenly;
   display: flex;
@@ -21,7 +22,7 @@
     margin: 12px;
     border-radius: 33px;
     border-style: solid;
-    border-color: rgb(3, 19, 238);
+    border-color: rgb(0, 10, 148);
     font-size: 17px;
     padding: 16px 30px;
     }
@@ -32,10 +33,11 @@
       display: flex;
       flex-direction: column;
       text-align: center;
-      background: linear-gradient(180deg, rgb(3, 19, 238) 0%, rgb(0, 168, 154) 100%);
+      background: linear-gradient(360deg, #DAF7A6 0%, rgb(0, 94, 86) 100%);
       margin: 8px 19px;
       padding: 16px 43px;
-      border-radius: 32px;
+      border-radius: 28px;
+      border: none;
 
     }
 }

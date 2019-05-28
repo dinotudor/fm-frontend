@@ -38,6 +38,10 @@ class UserProfile extends Component {
     return (
       <div>
         <h1>{profile.username}</h1>
+        <form onSubmit={this.handleFormSubmit}>
+          <input type="submit" value="Add to favorites" />
+        </form>
+        <br/>
         <img src={profile.image} alt="pic"/>
         <h4>BIO</h4>
         <p>{profile.description}</p>
@@ -52,9 +56,7 @@ class UserProfile extends Component {
               return <ReactPlayer key={mediaObj._id}url={mediaObj.url} />
             })
           }
-        <form onSubmit={this.handleFormSubmit}>
-          <input type="submit" value="Add to favorites" />
-        </form>
+
 
       </div>
     )
