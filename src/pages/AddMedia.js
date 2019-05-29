@@ -20,6 +20,7 @@ class AddMedia extends Component {
     const { id } = this.props.match.params;
 
     media.addMedia(type, url, title, description, year, month, id)
+    .then(()=>{
     this.setState({
       type: '',
       url: '',
@@ -29,8 +30,10 @@ class AddMedia extends Component {
       month: ''
     })
 
-
+    this.props.history.push('/profile');
   }
+    )
+}
 
   handleChange = event => {
     const { name, value } = event.target;
