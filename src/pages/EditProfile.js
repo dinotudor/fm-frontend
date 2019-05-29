@@ -11,6 +11,8 @@ class EditProfile extends Component {
     genres: '',
     city: '',
     image: '',
+    phone:'',
+    facebook:'',
     disable: true
   }
 
@@ -27,7 +29,9 @@ class EditProfile extends Component {
           instruments: '',
           genres: '',
           city: '',
-          image: ''
+          image: '',
+          phone:'',
+          facebook:'',
         })
 
         this.props.history.push('/profile');
@@ -75,8 +79,9 @@ class EditProfile extends Component {
         <h4 className="blue-text text-darken-2">edit profile</h4>
       </div>
         <form onSubmit={this.handleFormSubmit}>
-          <label>User Name:</label>
+          <label>Username:</label>
             <input
+              className="input-field col s6"
               type="text"
               name="username"
               placeholder="username"
@@ -117,6 +122,24 @@ class EditProfile extends Component {
               name="genres"
               placeholder="genres"
               value={this.genres}
+              onChange={this.handleChange}
+            />
+
+            <label>Facebook page:</label>
+            <input
+              type="text"
+              name="facebook"
+              placeholder="facebook page"
+              value={this.facebook}
+              onChange={this.handleChange}
+            />
+
+            <label>Phone:</label>
+            <input
+              type="text"
+              name="phone"
+              placeholder="phone"
+              value={this.phone}
               onChange={this.handleChange}
             />
 

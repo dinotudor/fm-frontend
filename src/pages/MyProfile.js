@@ -59,6 +59,10 @@ class MyProfile extends Component {
                   <p>{this.state.user.instruments}</p>
                   <h4>City:</h4>
                   <p>{this.state.user.city}</p>
+                  <h4>facebook:</h4>
+                  <p>{this.state.user.facebook}</p>
+                  <h4>phone:</h4>
+                  <p>{this.state.user.facebook}</p>
                   </div>
                 </div>
               </div>

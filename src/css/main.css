@@ -35,6 +35,15 @@
 body {
   margin: 0; }
 
+.user-ul {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center; }
+  .user-ul-list {
+    width: 35%; }
+  .user-ul .icon-img {
+    width: 35%; }
+
 .signup {
   background: #eee;
   height: 100vh;
