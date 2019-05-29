@@ -84,3 +84,6 @@ body {
 .nav-parent {
   width: 100%;
   background: darkgreen; }
+
+.form-edit {
+  padding: 50px; }

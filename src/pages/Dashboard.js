@@ -21,6 +21,12 @@ class Dashboard extends Component {
       <div className="card-panel center">
         <h4 className="blue-text text-darken-2"><i className="material-icons">library_music</i> find musician</h4>
       </div>
+      <form>
+        <label><i class="material-icons">search</i></label>
+        <input
+          placeholder="search"
+        />
+      </form>
       {profiles.map((profile, index)=>{
         return <Link key={profile._id} to={`userprofile/${profile._id}`}>
               <div className="row">

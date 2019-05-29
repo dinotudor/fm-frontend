@@ -43,7 +43,7 @@ class AddMedia extends Component {
       <div className="card-panel center">
         <h4 className="blue-text text-darken-2">add media</h4>
       </div>
-        <form onSubmit={this.handleFormSubmit}>
+        <form className="form-edit" onSubmit={this.handleFormSubmit}>
 
           <label>Title:</label>
           <input

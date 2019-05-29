@@ -79,7 +79,7 @@ class EditProfile extends Component {
       <div className="card-panel center">
         <h4 className="blue-text text-darken-2">edit profile</h4>
       </div>
-        <form onSubmit={this.handleFormSubmit}>
+        <form className="form-edit" onSubmit={this.handleFormSubmit}>
           <label>Username:</label>
             <input
               className="input-field col s6"
