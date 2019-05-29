@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import {withAuth} from './../lib/AuthProvider';
 import { Link } from 'react-router-dom';
-import profile from './../lib/profile-service'
+import profile from './../lib/profile-service';
+import ReactPlayer from 'react-player'
 
 class MyProfile extends Component {
   state = {
@@ -17,6 +18,7 @@ class MyProfile extends Component {
     profile.getOne(this.props.user._id)
       .then((data) =>{
         this.setState({user: data})
+        console.log(data.media)
       })
   }
 
@@ -27,6 +29,7 @@ class MyProfile extends Component {
     }
   }
   render() {
+    //const { media } = this.data;
     return (
       <div>
         <div className="center">
@@ -46,7 +49,7 @@ class MyProfile extends Component {
                 <div className="card">
                   <div className="card-image">
                     <img src={this.state.user.image} alt="pic"/>
-                    <span className="card-title"><i class="material-icons medium">local_activity</i></span>
+                    <span className="card-title"><i className="material-icons medium">local_activity</i></span>
                   </div>
                 <div className="card-content">
                   <h1>{this.state.user.username}</h1>
@@ -62,6 +65,7 @@ class MyProfile extends Component {
             </div>
           </div>
         }
+
       </div>
     )
   }

@@ -28,9 +28,9 @@ class Dashboard extends Component {
                   <div className="card large">
                     <div className="card-image">
                       <img src={profile.image} alt="pic"/>
-                      <span class="card-title"></span>
+                      <span className="card-title"></span>
                     </div>
-                    <div class="card-content">
+                    <div className="card-content">
                       <h4>{profile.username}</h4>
                       <p>Instruments: {profile.instruments} <br />
                          City:{profile.city}</p>
