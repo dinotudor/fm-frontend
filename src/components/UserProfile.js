@@ -69,6 +69,9 @@ class UserProfile extends Component {
           </div>
         </div>
       </div>
+      <div className="card-panel center">
+        <h4 className="blue-text text-darken-3"><i className="material-icons">play_circle_filled</i> media</h4>
+      </div>
           {
             profile.media.map((mediaObj) =>{
               return <ReactPlayer key={mediaObj._id}url={mediaObj.url} />

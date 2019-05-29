@@ -19,10 +19,10 @@ class Dashboard extends Component {
     return (
       <div>
       <div className="card-panel center">
-        <h4 className="blue-text text-darken-2"><i className="material-icons">library_music</i> find musician</h4>
+        <h4 className="blue-text text-darken-3"><i className="material-icons">library_music</i> find musician</h4>
       </div>
-      <form>
-        <label><i class="material-icons">search</i></label>
+      <form className="form-edit">
+        <label><i className="material-icons">search</i></label>
         <input
           placeholder="search"
         />
@@ -37,7 +37,7 @@ class Dashboard extends Component {
                       <span className="card-title"></span>
                     </div>
                     <div className="card-content">
-                      <h4>{profile.username}</h4>
+                      <h3>{profile.username}</h3>
                       <p>Instruments: {profile.instruments} <br />
                          City:{profile.city}</p>
 

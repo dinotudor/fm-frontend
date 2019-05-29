@@ -40,7 +40,7 @@ class MyProfile extends Component {
           <Link className="waves-effect waves-light btn-small" to='/addmedia'>Add Media</Link>
         </div>
        <div className="card-panel center">
-          <h4 className="blue-text text-darken-2">my profile</h4>
+          <h4 className="blue-text text-darken-3">my profile</h4>
         </div>
         {
           !this.state.user ?
