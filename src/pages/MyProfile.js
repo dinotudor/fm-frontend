@@ -72,6 +72,9 @@ class MyProfile extends Component {
             </div>
           </div>
         }
+        <div className="card-panel center">
+          <h4 className="blue-text text-darken-3"><i className="material-icons">play_circle_filled</i> media</h4>
+        </div>
        { !loading && this.state.user.media.map((media)=>{
           return <ReactPlayer key={media._id}url={media.url} />
 

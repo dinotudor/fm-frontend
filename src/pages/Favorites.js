@@ -34,7 +34,7 @@ class Favorites extends Component {
     return(
       <div>
       <div className="card-panel center">
-        <h4 className="blue-text text-darken-2">Favorites</h4>
+        <h4 className="blue-text text-darken-2">favorites</h4>
       </div>
         {favorites.map((favoriteObj, index)=>{
         return <div className="row">
