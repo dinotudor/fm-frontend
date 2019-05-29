@@ -44,7 +44,7 @@ class UserProfile extends Component {
             <div className="card">
             <div className="card-image">
               <img src={profile.image} alt="pic"/>
-              <button onClick={this.handleFormSubmit} className="btn-floating halfway-fab waves-effect waves-light green"><i class="material-icons">add</i></button>
+              <button onClick={this.handleFormSubmit} className="btn-floating halfway-fab waves-effect waves-light green"><i className="material-icons">add</i></button>
             </div>
             <div className="card-content">
               <h3>{profile.username}</h3>
@@ -52,9 +52,9 @@ class UserProfile extends Component {
 
               <div className="contact-icons">
                 <ul className="user-ul">
-                  <li className="user-list"><a href={'http://www.google.com'} target="_blank" ><img className="icon-img" src={phone} alt="phone"/></a></li>
-                  <li className="user-list"><a href={'http://www.google.com'} target="_blank" ><img className="icon-img" src={email} alt="email"/></a></li>
-                  <li className="user-list"><a href={'http://www.facebook.com'} target="_blank" ><img className="icon-img" src={facebook} alt="phone"/></a></li>
+                  <li className="user-list"><a href={profile.phone} target="_blank" ><img className="icon-img" src={phone} alt="phone"/></a></li>
+                  <li className="user-list"><a href={profile.email} target="_blank" ><img className="icon-img" src={email} alt="email"/></a></li>
+                  <li className="user-list"><a href={profile.facebook} target="_blank" ><img className="icon-img" src={facebook} alt="facebook"/></a></li>
                 </ul>
               </div>
               <h4>Bio</h4>
@@ -62,6 +62,8 @@ class UserProfile extends Component {
               <h4>instruments</h4>
               <p>{profile.instruments}</p>
               <h4>Genres</h4>
+              <p>{profile.genres}</p>
+              <h4>City</h4>
               <p>{profile.city}</p>
             </div>
           </div>

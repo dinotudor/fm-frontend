@@ -2,11 +2,12 @@ import React, { Component } from 'react'
 import {withAuth} from './../lib/AuthProvider';
 import { Link } from 'react-router-dom';
 import profile from './../lib/profile-service';
-import ReactPlayer from 'react-player'
+import ReactPlayer from 'react-player';
 
 class MyProfile extends Component {
   state = {
-    user: null
+    user: null,
+    loading: true,
   }
 
   componentDidMount(){
@@ -17,8 +18,8 @@ class MyProfile extends Component {
   getMyProfile = () => {
     profile.getOne(this.props.user._id)
       .then((data) =>{
-        this.setState({user: data})
-        console.log(data.media)
+        this.setState({user: data, loading: false,})
+
       })
   }
 
@@ -29,7 +30,9 @@ class MyProfile extends Component {
     }
   }
   render() {
-    //const { media } = this.data;
+    console.log("rendering");
+    const {loading} = this.state;
+
     return (
       <div>
         <div className="center">
@@ -62,13 +65,18 @@ class MyProfile extends Component {
                   <h4>facebook:</h4>
                   <p>{this.state.user.facebook}</p>
                   <h4>phone:</h4>
-                  <p>{this.state.user.facebook}</p>
+                  <p>{this.state.user.phone}</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         }
+       { !loading && this.state.user.media.map((media)=>{
+          return <ReactPlayer key={media._id}url={media.url} />
+
+       })
+       }
 
       </div>
     )

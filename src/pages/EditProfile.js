@@ -10,18 +10,18 @@ class EditProfile extends Component {
     instruments: '',
     genres: '',
     city: '',
-    image: '',
-    phone:'',
     facebook:'',
+    phone:'',
+    email: '',
+    image: '',
     disable: true
   }
 
   handleFormSubmit = (e) => {
     console.log('LOG', this.state, this.props.user)
     e.preventDefault();
-    const { username, description, instruments, genres, image, city } = this.state;
 
-    profile.editOne(username, description, instruments, genres, city, image)
+    profile.editOne(this.state)
       .then(()=>{
         this.setState({
           username: '',
@@ -29,9 +29,10 @@ class EditProfile extends Component {
           instruments: '',
           genres: '',
           city: '',
-          image: '',
-          phone:'',
           facebook:'',
+          phone:'',
+          email: '',
+          image: ''
         })
 
         this.props.history.push('/profile');
@@ -56,7 +57,7 @@ class EditProfile extends Component {
       this.setState({
         image,
         disable: false,
-      })
+      },()=>{console.log(this.state.image)})
     })
     .catch((error) => console.log(error))
   }
@@ -64,8 +65,8 @@ class EditProfile extends Component {
   componentDidMount() {
     profile.getOne(this.props.user._id)
       .then((data) =>{
-        const { username, city, description, instruments, genres, image} = data;
-        this.setState({ username, city, description, instruments, genres, image})
+        const { username, description, instruments, genres, city, facebook, phone, email, image  } = data;
+        this.setState({ username, description, instruments, genres, city, facebook, phone, email, image})
       })
   }
 
@@ -107,21 +108,21 @@ class EditProfile extends Component {
               onChange={this.handleChange}
             />
 
-            <label>City:</label>
-            <input
-              type="text"
-              name="city"
-              placeholder="city"
-              value={this.city}
-              onChange={this.handleChange}
-            />
-
             <label>Genres:</label>
             <input
               type="text"
               name="genres"
               placeholder="genres"
               value={this.genres}
+              onChange={this.handleChange}
+            />
+
+            <label>City:</label>
+            <input
+              type="text"
+              name="city"
+              placeholder="city"
+              value={this.city}
               onChange={this.handleChange}
             />
 
@@ -140,6 +141,15 @@ class EditProfile extends Component {
               name="phone"
               placeholder="phone"
               value={this.phone}
+              onChange={this.handleChange}
+            />
+
+            <label>Email:</label>
+            <input
+              type="text"
+              name="email"
+              placeholder="email"
+              value={this.email}
               onChange={this.handleChange}
             />
 
