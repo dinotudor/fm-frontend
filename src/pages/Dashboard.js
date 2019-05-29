@@ -2,32 +2,38 @@ import React, { Component } from 'react'
 import {  Link } from "react-router-dom";
 //import { withAuth } from "../lib/AuthProvider";
 import profile from '../lib/profile-service';
+import SearchBar from './../components/SearchBar'
 
 class Dashboard extends Component {
   state = {
     profiles: [],
+    filteredProfiles: []
   }
 
   componentDidMount(){
     profile.getAll()
       .then((profiles)=>{
-        this.setState({profiles})})
+        this.setState({profiles, filteredProfiles: profiles})})
+  }
+
+  filterUserProfiles = (queryString) => {
+    const profilesCopy = [...this.state.profiles];
+    const queryLowercased = queryString.toLowerCase();
+    const filteredProfiles = profilesCopy.filter((profile) => {
+      return profile.username.toLowerCase().includes(queryLowercased)
+    })
+    this.setState({filteredProfiles})
   }
 
   render() {
-    const {profiles} = this.state;
+    const {filteredProfiles} = this.state;
     return (
       <div>
-      <div className="card-panel center">
-        <h4 className="blue-text text-darken-3"><i className="material-icons">library_music</i> find musician</h4>
+        <div className="card-panel center">
+          <h4 className="blue-text text-darken-3"><i className="material-icons">library_music</i> find musician</h4>
+          <SearchBar filterUserProfiles={this.filterUserProfiles}/>
       </div>
-      <form className="form-edit">
-        <label><i className="material-icons">search</i></label>
-        <input
-          placeholder="search"
-        />
-      </form>
-      {profiles.map((profile, index)=>{
+      {filteredProfiles.map((profile, index)=>{
         return <Link key={profile._id} to={`userprofile/${profile._id}`}>
               <div className="row">
                 <div className="col s12 m6">
