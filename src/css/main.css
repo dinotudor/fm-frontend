@@ -1,7 +1,6 @@
 .login {
   background: #eee;
   height: 100vh;
-  justify-content: space-evenly;
   display: flex;
   flex-direction: column;
   text-align: center; }
@@ -12,13 +11,14 @@
     justify-content: center;
     flex-direction: column;
     margin: 10px 35px;
-    align-items: center; }
+    align-items: center;
+    margin-top: 150px; }
   .login-input {
     margin: 12px;
     border-radius: 33px;
     border-style: solid;
     border-color: #000a94;
-    font-size: 17px;
+    font-size: 2rem;
     padding: 16px 30px; }
   .login .btn {
     color: #fff;
@@ -43,11 +43,16 @@ body {
     width: 35%; }
   .user-ul .icon-img {
     width: 35%; }
+  .user-ul .player {
+    width: 100%; }
+
+.card-image .player {
+  max-width: 100%;
+  margin: auto; }
 
 .signup {
   background: #eee;
   height: 100vh;
-  justify-content: space-evenly;
   display: flex;
   flex-direction: column;
   text-align: center; }
@@ -58,7 +63,8 @@ body {
     justify-content: center;
     flex-direction: column;
     margin: 10px 35px;
-    align-items: center; }
+    align-items: center;
+    margin-top: 150px; }
   .signup-input {
     margin: 12px;
     border-radius: 33px;
@@ -86,4 +92,5 @@ body {
   background: darkgreen; }
 
 .form-edit {
-  padding: 50px; }
+  padding: 50px;
+  margin-bottom: 30px; }

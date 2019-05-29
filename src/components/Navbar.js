@@ -7,7 +7,7 @@ class Navbar extends Component {
     const { user, logout, isLoggedin } = this.props;
 
     return (
-      <nav className="nav-wrapper purple darken-3 center">
+      <nav className="nav-wrapper light-blue darken-4 center">
         <div className="">
           {isLoggedin ? (
             <>
@@ -20,8 +20,6 @@ class Navbar extends Component {
           ) : (
             <>
             <h4 className="white-text"><i className="material-icons">library_music</i></h4>
-{/*               <Link className="waves-effect waves-light btn-small" to="/login">Login</Link>
-              <Link className="waves-effect waves-light btn-small" to="/signup">Signup</Link> */}
             </>
           )}
         </div>

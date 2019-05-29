@@ -45,7 +45,8 @@ class Login extends Component {
             value={password}
             onChange={this.handleChange}
           />
-          <button className="waves-effect waves-light btn-large" type="submit">login <i className="material-icons">check_circle</i></button>
+          <br/>
+          <button className="waves-effect waves-light btn-large" type="submit">login</button>
         </form>
         <p>
           Dont have an account?<br/>

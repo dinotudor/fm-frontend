@@ -48,7 +48,7 @@ class MyProfile extends Component {
           :
           <div>
             <div className="row">
-              <div className="col s12 m6">
+              <div className="col s12 m12">
                 <div className="card">
                   <div className="card-image">
                     <img src={this.state.user.image} alt="pic"/>
@@ -62,9 +62,9 @@ class MyProfile extends Component {
                   <p>{this.state.user.instruments}</p>
                   <h4>City:</h4>
                   <p>{this.state.user.city}</p>
-                  <h4>facebook:</h4>
+                  <h4>Facebook:</h4>
                   <p>{this.state.user.facebook}</p>
-                  <h4>phone:</h4>
+                  <h4>Phone:</h4>
                   <p>{this.state.user.phone}</p>
                   </div>
                 </div>
@@ -76,7 +76,19 @@ class MyProfile extends Component {
           <h4 className="blue-text text-darken-3"><i className="material-icons">play_circle_filled</i> media</h4>
         </div>
        { !loading && this.state.user.media.map((media)=>{
-          return <ReactPlayer key={media._id}url={media.url} />
+          return <div class="row">
+                      <div class="col s12 m12">
+                        <div class="card">
+                          <div class="card-image">
+                            <ReactPlayer className="player" key={media._id}url={media.url} />
+                            </div>
+                            <div class="card-content">
+                            <h4>{media.title}</h4>
+                            <p>Year: {media.year}</p>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
 
        })
        }

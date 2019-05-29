@@ -43,7 +43,7 @@ class Signup extends Component {
             value={username}
             onChange={this.handleChange}
           />
-          <label>Password:</label>
+          <label>password</label>
           <input
             className="input-field col s6"
             type="password"
@@ -51,9 +51,10 @@ class Signup extends Component {
             value={password}
             onChange={this.handleChange}
           />
+          <br />
           <input className="waves-effect waves-light btn-large" type="submit" value="Signup" />
         </form>
-        <p>
+        <p className="">
           Already have account?<br/>
           <Link className="waves-effect waves-light btn-large" to={"/login"}> Login</Link>
         </p>

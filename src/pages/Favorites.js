@@ -38,7 +38,7 @@ class Favorites extends Component {
       </div>
         {favorites.map((favoriteObj, index)=>{
         return <div className="row">
-                <div className="col s12 m6">
+                <div className="col s12 m12">
                   <div className="card">
                     <div className="card-image">
                      <img src={favoriteObj.image} alt='favPic'/>

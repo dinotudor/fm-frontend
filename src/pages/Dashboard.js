@@ -30,13 +30,12 @@ class Dashboard extends Component {
     return (
       <div>
         <div className="card-panel center">
-          <h4 className="blue-text text-darken-3"><i className="material-icons">library_music</i> find musician</h4>
           <SearchBar filterUserProfiles={this.filterUserProfiles}/>
       </div>
       {filteredProfiles.map((profile, index)=>{
         return <Link key={profile._id} to={`userprofile/${profile._id}`}>
               <div className="row">
-                <div className="col s12 m6">
+                <div className="col s12 m12">
                   <div className="card large">
                     <div className="card-image">
                       <img src={profile.image} alt="pic"/>

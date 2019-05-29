@@ -39,8 +39,12 @@ class UserProfile extends Component {
     console.log('USER ID', profile)
     return (
       <div>
+      <div className="card-panel center">
+        <h4 className="blue-text text-darken-3"><i className="material-icons large">person_pin</i></h4>
+        <h3>{profile.username}</h3>
+      </div>
         <div className="row">
-          <div className="col s12 m6">
+          <div className="col s12 m12">
             <div className="card">
             <div className="card-image">
               <img src={profile.image} alt="pic"/>
@@ -74,7 +78,19 @@ class UserProfile extends Component {
       </div>
           {
             profile.media.map((mediaObj) =>{
-              return <ReactPlayer key={mediaObj._id}url={mediaObj.url} />
+              return <div class="row">
+                      <div class="col s12 m12">
+                        <div class="card">
+                          <div class="card-image">
+                           <ReactPlayer className="player" key={mediaObj._id}url={mediaObj.url} />
+                          </div>
+                          <div class="card-content">
+                            <h4>{mediaObj.title}</h4>
+                            <p>Year: {mediaObj.year}</p>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
             })
           }
 
@@ -85,3 +101,26 @@ class UserProfile extends Component {
 }
 
 export default withAuth(UserProfile);
+
+/*
+
+  <div class="row">
+    <div class="col s12 m7">
+      <div class="card">
+        <div class="card-image">
+          <img src="images/sample-1.jpg">
+          <span class="card-title">Card Title</span>
+        </div>
+        <div class="card-content">
+          <p>I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively.</p>
+        </div>
+        <div class="card-action">
+          <a href="#">This is a link</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+*/

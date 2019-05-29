@@ -15,8 +15,8 @@ export class SearchBar extends Component {
     return (
       <div>
         <form className="form-edit">
-          <label><i className="material-icons">search</i></label>
-          <input placeholder="search" onChange={this.handleChange} name="query"
+          <label className="left"><i className="material-icons big">search</i></label>
+          <input className="text-input left" placeholder="search"  onChange={this.handleChange} name="query"
             value={this.state.query}
           />
         </form>
