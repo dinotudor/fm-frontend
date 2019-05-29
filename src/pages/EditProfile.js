@@ -71,7 +71,9 @@ class EditProfile extends Component {
     const { disable } = this.state;
     return (
       <div>
-        <h3>Edit Profile</h3>
+      <div className="card-panel center">
+        <h4 className="blue-text text-darken-2">edit profile</h4>
+      </div>
         <form onSubmit={this.handleFormSubmit}>
           <label>User Name:</label>
             <input

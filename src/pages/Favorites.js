@@ -33,7 +33,7 @@ class Favorites extends Component {
     console.log('FAVORITES BY USER -> ',favorites);
     return(
       <div>
-      <div className="card-panel">
+      <div className="card-panel center">
         <h4 className="blue-text text-darken-2">Favorites</h4>
       </div>
         {favorites.map((favoriteObj, index)=>{

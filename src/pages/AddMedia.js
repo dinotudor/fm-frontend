@@ -40,7 +40,9 @@ class AddMedia extends Component {
   render() {
     return (
       <div>
-        <h3>Add Media</h3>
+      <div className="card-panel center">
+        <h4 className="blue-text text-darken-2">add media</h4>
+      </div>
         <form onSubmit={this.handleFormSubmit}>
 
           <label>Title:</label>

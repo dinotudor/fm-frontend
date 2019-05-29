@@ -18,7 +18,7 @@ class Dashboard extends Component {
     const {profiles} = this.state;
     return (
       <div>
-      <div className="card-panel">
+      <div className="card-panel center">
         <h4 className="blue-text text-darken-2"><i className="material-icons">library_music</i> find musician</h4>
       </div>
       {profiles.map((profile, index)=>{

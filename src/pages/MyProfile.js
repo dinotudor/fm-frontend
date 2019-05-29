@@ -36,7 +36,7 @@ class MyProfile extends Component {
           <Link className="waves-effect waves-light btn-small" to='/edit'>Edit Profile</Link>
           <Link className="waves-effect waves-light btn-small" to='/addmedia'>Add Media</Link>
         </div>
-       <div className="card-panel">
+       <div className="card-panel center">
           <h4 className="blue-text text-darken-2">my profile</h4>
         </div>
         {

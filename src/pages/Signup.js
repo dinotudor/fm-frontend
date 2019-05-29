@@ -28,19 +28,24 @@ class Signup extends Component {
   render() {
     const { username, password } = this.state;
     return (
+
       <div className="signup">
+      <div className="card-panel green">
+        <h4 className="white-text text-darken-2"><i className="material-icons">account_box</i> sign up</h4>
+      </div>
         <form className="signup-form" onSubmit={this.handleFormSubmit}>
-          <label>Username:</label>
+          <label className="" >username</label>
           <input
-            className="signup-input"
+            className="input-field col s6"
             type="text"
             name="username"
+            placeholder="username"
             value={username}
             onChange={this.handleChange}
           />
           <label>Password:</label>
           <input
-            className="signup-input"
+            className="input-field col s6"
             type="password"
             name="password"
             value={password}
