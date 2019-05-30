@@ -67,7 +67,7 @@ class AddMedia extends Component {
             onChange={this.handleChange}
           />
 
-          <label>URL:</label>
+          <label>URL (youtube or soundcloud link) :</label>
           <input
             type="text"
             name="url"

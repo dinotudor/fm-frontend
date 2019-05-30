@@ -35,10 +35,6 @@ class MyProfile extends Component {
 
     return (
       <div>
-        <div className="center">
-          <Link className="waves-effect waves-light btn-small" to='/edit'>Edit Profile</Link>
-          <Link className="waves-effect waves-light btn-small" to='/addmedia'>Add Media</Link>
-        </div>
        <div className="card-panel center">
           <h4 className="blue-text text-darken-3">my profile</h4>
         </div>
@@ -54,6 +50,10 @@ class MyProfile extends Component {
                     <img src={this.state.user.image} alt="pic"/>
                     <span className="card-title"><i className="material-icons medium">local_activity</i></span>
                   </div>
+                <div className="center">
+                  <Link className="waves-effect waves-light btn-small" to='/edit'>Edit Profile</Link>
+                  <Link className="waves-effect waves-light btn-small" to='/addmedia'>Add Media</Link>
+                </div>
                 <div className="card-content">
                   <h1>{this.state.user.username}</h1>
                   <h4>Bio:</h4>

@@ -40,7 +40,7 @@ class UserProfile extends Component {
     return (
       <div>
       <div className="card-panel center">
-        <h4 className="blue-text text-darken-3"><i className="material-icons large">person_pin</i></h4>
+        {/* <h4 className="blue-text text-darken-3"><i className="material-icons medium">person_pin</i></h4> */}
         <h3>{profile.username}</h3>
       </div>
         <div className="row">
