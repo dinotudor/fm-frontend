@@ -18,7 +18,7 @@ class Navbar extends Component {
     }
 
     return (
-      <nav className="nav-wrapper light-blue darken-4 center">
+      <nav className="nav-wrapper light-blue darken-4 center logo-navbar">
         <div className="">
           {isLoggedin ? (
             <>
