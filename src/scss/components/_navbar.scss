@@ -27,3 +27,9 @@
   background-size: 35px;
   background-position: 95% center;
 }
+
+.fixed {
+  position: fixed;
+  z-index: 999;
+  margin-top: -8px;
+}
