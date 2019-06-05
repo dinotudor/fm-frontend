@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { withAuth } from './../lib/AuthProvider';
-import { Link } from 'react-router-dom';
 import profile from './../lib/profile-service';
 
 class EditProfile extends Component {
@@ -72,7 +71,7 @@ class EditProfile extends Component {
 
 
   render() {
-    console.log(this.state);
+    console.log('STATE',this.state);
     const { disable } = this.state;
     return (
       <div>
@@ -85,8 +84,8 @@ class EditProfile extends Component {
               className="input-field col s6"
               type="text"
               name="username"
-              placeholder="username"
-              value={this.username}
+              placeholder="user name"
+              value={this.state.username}
               onChange={this.handleChange}
             />
 
@@ -95,7 +94,7 @@ class EditProfile extends Component {
               type="text"
               name="description"
               placeholder="description"
-              value={this.description}
+              value={this.state.description}
               onChange={this.handleChange}
             />
 
@@ -104,7 +103,7 @@ class EditProfile extends Component {
               type="text"
               name="instruments"
               placeholder="instruments"
-              value={this.instruments}
+              value={this.state.instruments}
               onChange={this.handleChange}
             />
 
@@ -113,7 +112,7 @@ class EditProfile extends Component {
               type="text"
               name="genres"
               placeholder="genres"
-              value={this.genres}
+              value={this.state.genres}
               onChange={this.handleChange}
             />
 
@@ -122,7 +121,7 @@ class EditProfile extends Component {
               type="text"
               name="city"
               placeholder="city"
-              value={this.city}
+              value={this.state.city}
               onChange={this.handleChange}
             />
 
@@ -131,7 +130,7 @@ class EditProfile extends Component {
               type="text"
               name="facebook"
               placeholder="facebook page"
-              value={this.facebook}
+              value={this.state.facebook}
               onChange={this.handleChange}
             />
 
@@ -140,7 +139,7 @@ class EditProfile extends Component {
               type="text"
               name="phone"
               placeholder="phone"
-              value={this.phone}
+              value={this.state.phone}
               onChange={this.handleChange}
             />
 
@@ -149,7 +148,7 @@ class EditProfile extends Component {
               type="text"
               name="email"
               placeholder="email"
-              value={this.email}
+              value={this.state.email}
               onChange={this.handleChange}
             />
 
