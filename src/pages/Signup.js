@@ -30,7 +30,7 @@ class Signup extends Component {
     return (
 
       <div className="signup">
-      <div className="card-panel green">
+      <div className="card-panel green panel-pos">
         <h4 className="white-text text-darken-2"><i className="material-icons">account_box</i> sign up</h4>
       </div>
         <form className="signup-form" onSubmit={this.handleFormSubmit}>

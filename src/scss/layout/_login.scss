@@ -1,3 +1,7 @@
+.panel-pos {
+  margin-top: 3rem;
+}
+
 .login {
   background:#eee;
   height: 100vh;
@@ -14,7 +18,8 @@
     flex-direction: column;
     margin: 10px 35px;
     align-items: center;
-    margin-top: 150px;
+    margin-top: 100px;
+    padding: 0 25%;
     }
 
 
