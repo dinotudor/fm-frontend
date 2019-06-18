@@ -31,27 +31,27 @@ class Dashboard extends Component {
       <div>
         <div className="card-panel center">
           <SearchBar filterUserProfiles={this.filterUserProfiles}/>
-      </div>
-      {filteredProfiles.map((profile, index)=>{
-        return <Link key={profile._id} to={`userprofile/${profile._id}`}>
-              <div className="row">
-                <div className="col s12 m12">
-                  <div className="card large">
-                    <div className="card-image">
-                      <img src={profile.image} alt="pic"/>
-                      <span className="card-title"></span>
-                    </div>
-                    <div className="card-content">
-                      <h3>{profile.username}</h3>
-                      <p>Instruments: {profile.instruments} <br />
-                         City:{profile.city}</p>
+        </div>
 
-                  </div>
+        <div className="row">
+          {filteredProfiles.map((profile, index)=>{
+            return <Link className="col s12 m4" key={profile._id} to={`userprofile/${profile._id}`}>
+              <div className="card large">
+                <div className="card-image">
+                  <img src={profile.image} alt="pic"/>
+                  <span className="card-title"></span>
+                </div>
+                <div className="card-content">
+                  <h3>{profile.username}</h3>
+                  <p>
+                    Instruments: {profile.instruments} <br />
+                    City:{profile.city}
+                  </p>
                 </div>
               </div>
-            </div>
             </Link>
-      })}
+          })}
+        </div>
 
       </div>
     )
